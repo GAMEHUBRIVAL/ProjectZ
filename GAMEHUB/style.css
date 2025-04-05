@@ -1,0 +1,772 @@
+body {
+    /* Set a visually appealing background image */
+    background-image: url('game hub-1.jpg'); /* Path to the background image file */
+
+    /* Ensure the background image covers the entire viewport */
+    background-size: cover; /* Scales the image proportionally to fill the viewport */
+
+    /* Position the image in the center of the viewport */
+    background-position: center; /* Centers the background image both horizontally and vertically */
+
+    /* Prevent the background image from repeating (tiling) */
+    background-repeat: no-repeat; /* Ensures a single, non-repeated image is displayed */
+
+    /* Remove any default margin applied to the body */
+    margin: 0; /* Prevents unnecessary spacing around the body element */
+
+    /* Prevent scrolling caused by content overflowing */
+    overflow: hidden; /* Ensures that overflowing content is hidden */
+
+    /* Set the height and width to always match the viewport size */
+    height: 100%; /* Sets the height to 100% of the viewport */
+    width: 100%; /* Sets the width to 100% of the viewport */
+}
+
+/* =======================================================================
+   Navbar Styling:
+   -----------------------------------------------------------------------
+   The navbar is designed to remain fixed at the top of the viewport while
+   adopting a modern, semi-transparent glassmorphic design. 
+======================================================================= */
+.navbar {
+    position: fixed; /* Fixes the navbar in place, so it remains visible even when scrolling */
+    top: 8px; /* Positions the navbar 8px from the top of the viewport */
+    left: 50%; /* Centers the navbar horizontally in the viewport */
+    transform: translateX(-50%); /* Adjusts the position to ensure the navbar is perfectly centered */
+    height: 115px; /* Sets the height of the navbar to a consistent 115px */
+    width: 85%; /* Makes the navbar span 85% of the viewport width for a proportional layout */
+    background: rgba(0, 0, 0, 0.2); /* Applies a black background with 20% opacity for a translucent effect */
+    backdrop-filter: blur(10px); /* Creates a blur effect to simulate the glassmorphic design */
+    border-radius: 10px; /* Rounds the corners of the navbar for a smooth, modern appearance */
+    padding: 10px; /* Adds inner spacing within the navbar for content separation */
+    text-align: center; /* Centers the text content horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a soft shadow for a subtle floating effect */
+}
+
+/* =======================================================================
+   Unordered List (Navbar Items) Styling:
+   -----------------------------------------------------------------------
+   The unordered list within the navbar is laid out using flexbox to ensure
+   a responsive, horizontally-aligned navigation menu.
+======================================================================= */
+.navbar ul {
+    list-style: none; /* Removes the default bullet points for list items */
+    padding: 0; /* Removes default inner padding for the list */
+    margin: 0; /* Removes default outer margins for the list */
+    display: flex; /* Sets a flexbox layout for the list items */
+    justify-content: center; /* Horizontally centers the list items within the navbar */
+    align-items: center; /* Vertically aligns the list items in the navbar */
+}
+
+/* =======================================================================
+   List Item (Navbar Links) Styling:
+   -----------------------------------------------------------------------
+   Each list item is spaced evenly to create a visually balanced layout.
+======================================================================= */
+.navbar ul li {
+    margin: 33px; /* Adds 33 pixels of horizontal margin to both sides of each list item */
+}
+/* ======================================================================
+   Button Styling:
+   ----------------------------------------------------------------------
+   The class ".butt" applies clean, readable styling for text links used
+   in buttons. It ensures text is visually prominent and well-spaced.
+====================================================================== */
+.butt {
+    text-decoration: none; /* Removes underline from the text */
+    color: #FFFFFF; /* Sets the text color to white for high visibility */
+    font-size: 18px; /* Ensures the text is easily readable at 18px */
+    font-weight: bold; /* Makes the text bold to emphasize importance */
+    padding: 10px; /* Adds spacing around the text for better readability */
+}
+
+/* ======================================================================
+   Navbar Styling (Pseudo-Element Effect):
+   ----------------------------------------------------------------------
+   The "::after" pseudo-element adds a visually appealing shadow blur 
+   effect beneath the navbar, enhancing its design with a modern touch.
+====================================================================== */
+.navbar::after {
+    content: ""; /* Inserts empty content, which is necessary for the pseudo-element */
+    display: block; /* Ensures the pseudo-element behaves like a block element */
+    height: 40px; /* Sets the height of the pseudo-element to 40px */
+    width: 100%; /* Makes the pseudo-element span the full width of the navbar */
+    background: rgba(0, 0, 0, 0.2); /* Applies a semi-transparent black background */
+    transform: scaleY(-1); /* Flips the pseudo-element vertically for symmetry */
+    border-radius: 10px; /* Rounds the corners of the pseudo-element */
+    filter: blur(10px); /* Adds a blur effect to simulate glassmorphism */
+    opacity: 1; /* Ensures the pseudo-element is fully visible */
+}
+
+/* ======================================================================
+   Button Base Styling:
+   ----------------------------------------------------------------------
+   The universal "button" style applies consistent formatting and hover 
+   interactions. It focuses on rounded corners, smooth transitions, and
+   visually appealing colors.
+====================================================================== */
+button {
+    background-color: #32CD32; /* Sets the button's background color to lime green */
+    color: #FFFFFF; /* Makes the button text white for sharp contrast */
+    padding: 15px 32px; /* Ensures balanced spacing around the button text */
+    font-size: 18px; /* Sets the font size for easy readability */
+    border: none; /* Removes default borders for a clean look */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    border-radius: 10px; /* Adds a slight roundness to the button's corners */
+    border-top-left-radius: 20px; /* Increases the curve of the top-left corner */
+    border-bottom-right-radius: 20px; /* Increases the curve of the bottom-right corner */
+    transition: 0.5s; /* Adds a smooth animation for hover effects */
+}
+
+/* ======================================================================
+   Button Hover Styling:
+   ----------------------------------------------------------------------
+   Creates dynamic hover effects by changing colors, borders, and curves.
+====================================================================== */
+button:hover {
+    background-color: #006B3C; /* Changes the background color to a darker green */
+    border-top-right-radius: 20px; /* Increases the curve of the top-right corner */
+    border-bottom-left-radius: 20px; /* Increases the curve of the bottom-left corner */
+    transition: 0.5s; /* Maintains the transition animation for consistency */
+}
+
+/* ======================================================================
+   Game Controller Styling (First Element):
+   ----------------------------------------------------------------------
+   The ".game-pad" class is for the primary game controller element,
+   designed to be positioned fixedly with specific spacing.
+====================================================================== */
+.game-pad {
+    position: fixed; /* Keeps the element fixed relative to the viewport, unaffected by scrolling */
+    margin-left: 2rem; /* Adds a left margin of 2rem to the element */
+    bottom: 2rem; /* Positions the element 2rem above the bottom edge of the viewport */
+    right: 2rem; /* Positions the element 2rem inward from the right edge of the viewport */
+    top: 27rem; /* Places the element 27rem below the top edge of the viewport */
+    left: 74rem; /* Positions the element 74rem inward from the left edge of the viewport */
+    /* Note: "justify-content" does not apply to elements with fixed positioning */
+}
+
+/* ======================================================================
+   Game Controller Styling (Second Element):
+   ----------------------------------------------------------------------
+   The ".game-pad-2" class handles positioning for a secondary game
+   controller element with unique spacing.
+====================================================================== */
+.game-pad-2 {
+    position: fixed; /* Ensures the element is fixed relative to the viewport */
+    bottom: 32.3rem; /* Positions the element 32.3rem above the bottom edge of the viewport */
+    left: 4rem; /* Places the element 4rem inward from the left edge of the viewport */
+}
+
+/* ======================================================================
+   Body Styling:
+   ----------------------------------------------------------------------
+   Creates a centered layout with a semi-transparent background,
+   flexbox alignment, and consistent height across the viewport.
+====================================================================== */
+body {
+    background-color: rgba(0, 0, 0, 0.2); /* Sets a semi-transparent black background color */
+    color: #FFFFFF; /* Ensures the text is white for strong contrast */
+    text-align: center; /* Horizontally centers all text */
+    margin: 0; /* Removes default body margins */
+    height: 100vh; /* Sets the height to match the full viewport height */
+    display: flex; /* Enables a flexbox layout */
+    justify-content: center; /* Horizontally centers the child elements */
+    align-items: center; /* Vertically centers the child elements */
+}
+
+/* ======================================================================
+   Upcoming Menu Styling:
+   ----------------------------------------------------------------------
+   Hidden by default; serves as a fullscreen overlay when visible,
+   with transitions for smooth appearance and custom positioning.
+====================================================================== */
+.upcoming-menu {
+    display: none; /* Hides the menu by default */
+    position: fixed; /* Locks the menu in place relative to the viewport */
+    top: 0; /* Aligns the menu to the top edge of the viewport */
+    left: 0; /* Aligns the menu to the left edge of the viewport */
+    width: 100%; /* Spans the full width of the viewport */
+    height: 100%; /* Spans the full height of the viewport */
+    z-index: 1000; /* Ensures the menu appears above all other elements */
+    justify-content: center; /* Centers content horizontally (flexbox property) */
+    align-items: center; /* Centers content vertically (flexbox property) */
+    transition: 0.5s; /* Adds a smooth transition effect */
+    margin-left: 22rem; /* Adjusts the menu's horizontal position with left margin */
+    margin-top: 10rem; /* Adjusts the menu's vertical position with top margin */
+}
+
+/* ======================================================================
+   Upcoming Content Styling:
+   ----------------------------------------------------------------------
+   Features a glassmorphic effect, centered text, and animations
+   with responsive dimensions and padding for a modern design.
+====================================================================== */
+.upcoming-content {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background for glass effect */
+    backdrop-filter: blur(10px); /* Adds a glassmorphic blur effect */
+    border: 2px solid #FF69B4; /* Adds a pink border around the content box */
+    border-radius: 10px; /* Smoothly rounds the corners */
+    padding: 20px; /* Creates consistent padding within the element */
+    text-align: center; /* Centers the text content */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.2), /* Subtle shadow below the box */
+        0px 20px 20px #000000; /* Stronger shadow at the bottom */
+    width: 50%; /* Restricts the content width to half of its container */
+    animation: fadeIn 0.5s ease-in-out; /* Animates the content with a fade-in effect */
+}
+
+/* ======================================================================
+   List Styling (Inside Upcoming Content):
+   ----------------------------------------------------------------------
+   Removes default list styles and ensures proper spacing and alignment
+   for a clean and professional layout.
+====================================================================== */
+.upcoming-content ul {
+    list-style: none; /* Removes bullet points from the list */
+    padding: 0; /* Resets padding for a clean layout */
+}
+
+.upcoming-content ul li {
+    margin: 5px; /* Adds spacing between each list item */
+}
+
+.upcoming-content ul li a {
+    text-decoration: none; /* Removes underlines from links */
+    font-size: 18px; /* Ensures link text is readable at 18px */
+    color: #FFFFFF; /* Sets link text color to white */
+    padding: 10px; /* Adds padding inside the link element */
+    display: block; /* Makes the links block elements (full-width clickable) */
+    background: linear-gradient(45deg, #00FFFF, #FFC0CB); /* Adds a diagonal gradient from cyan to pink */
+    border-radius: 10px; /* Smoothly rounds the corners */
+}
+
+.upcoming-content ul li a:hover {
+    background: linear-gradient(45deg, #008B8B, #FF69B4); /* Changes the gradient on hover */
+    box-shadow: 0px 20px 20px #000000; /* Adds a black shadow effect on hover */
+}
+
+/* ======================================================================
+   Header and Paragraph Styling:
+   ----------------------------------------------------------------------
+   Ensures consistent text formatting for headings and paragraphs,
+   including responsive spacing and hover effects.
+====================================================================== */
+.upcoming-menu h2 {
+    color: #FFFFFF; /* Sets heading color to white */
+    margin-bottom: 30px; /* Adds spacing below the heading */
+}
+
+.upcoming-content p {
+    display: block; /* Makes paragraphs block-level elements */
+    padding: 10px; /* Adds consistent padding */
+    margin: 5px 0; /* Adds vertical spacing between paragraphs */
+    color: #000000; /* Default paragraph text color is black */
+    font-size: 16px; /* Sets the font size to 16px for readability */
+    border: 1px solid #00FFFF; /* Adds a dark cyan border */
+    border-radius: 5px; /* Smoothly rounds the paragraph edges */
+    transition: 0.5s; /* Adds smooth transitions for hover effects */
+}
+
+.upcoming-content p:hover {
+    color: #FFFFFF; /* Changes text color to white on hover */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+    transform: scale(1.1); /* Slightly enlarges the element */
+    box-shadow: 0 0 10px #00FFFF; /* Adds a glowing effect around the element */
+    background: rgba(0, 0, 0, 0.8); /* Adds a darker semi-transparent background */
+    backdrop-filter: blur(10px); /* Intensifies the glassmorphic effect */
+}
+
+/* ======================================================================
+   Close Button Styling:
+   ----------------------------------------------------------------------
+   Positions and styles the close button for the upcoming menu, ensuring
+   it remains prominent and interactive with hover effects.
+====================================================================== */
+.upcoming-close-btn {
+    position: center; /* Centers the button relative to the viewport */
+    top: 0.5rem; /* Positions it slightly below the top edge */
+    right: 45rem; /* Adjusts its position horizontally from the right */
+    font-size: 50px; /* Ensures the button is large and visible */
+    color: #FF0000; /* Sets the text color to red */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.upcoming-close-btn:hover {
+    text-shadow: 0px 20px 20px #CC0000; /* Adds a strong red shadow effect */
+    color: #CC0000; /* Changes text color to dark red */
+    transition: 0.5s; /* Smooth transition for the hover effect */
+}
+
+/* ======================================================================
+   Menu Overlay Styling:
+   ----------------------------------------------------------------------
+   This styling configures the fullscreen menu overlay, ensuring it is
+   initially hidden and displayed prominently when toggled.
+====================================================================== */
+.menu {
+    display: none; /* Hides the menu by default */
+    position: fixed; /* Fixes the menu in place relative to the viewport */
+    top: 0; /* Aligns the top edge of the menu with the viewport */
+    left: 0; /* Aligns the left edge of the menu with the viewport */
+    width: 100%; /* Makes the menu span the full width of the viewport */
+    height: 100%; /* Makes the menu span the full height of the viewport */
+    z-index: 1000; /* Ensures the menu appears above other elements */
+    justify-content: center; /* Centers content horizontally (flexbox property) */
+    align-items: center; /* Centers content vertically (flexbox property) */
+    transition: 0.5s; /* Adds a smooth transition effect when toggling visibility */
+    margin-left: 22rem; /* Adjusts the horizontal position of the menu */
+    margin-top: 10rem; /* Adjusts the vertical position of the menu */
+}
+
+/* ======================================================================
+   Menu Content Styling:
+   ----------------------------------------------------------------------
+   Creates a glassmorphic effect with translucent backgrounds, blurred
+   overlays, and a glowing shadow for a modern look.
+====================================================================== */
+.menu-content {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background for glass effect */
+    backdrop-filter: blur(10px); /* Adds a blur effect to enhance the glassmorphic appearance */
+    border: 2px solid #00FFFF; /* Highlights the content with a cyan border */
+    border-radius: 10px; /* Rounds the corners for smooth edges */
+    padding: 20px; /* Adds consistent inner spacing */
+    text-align: center; /* Centers all text content */
+    box-shadow: 0px 0px 20px #00FFFF; /* Adds a cyan glow around the element */
+    width: 50%; /* Restricts the content width to 50% of its container */
+    animation: fadeIn 0.5s ease-in-out; /* Adds a fade-in animation for smooth appearance */
+}
+
+/* ======================================================================
+   Menu Content Header Styling:
+   ----------------------------------------------------------------------
+   Sets the appearance for the main header within the menu content.
+====================================================================== */
+.menu-content h2 {
+    color: #FFFFFF; /* Sets the text color to white for strong contrast */
+    margin-bottom: 30px; /* Adds spacing below the header for balance */
+}
+
+/* ======================================================================
+   Menu List Styling:
+   ----------------------------------------------------------------------
+   Configures the layout and spacing for the list of links within the menu.
+====================================================================== */
+.menu ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Resets inner padding for a clean layout */
+}
+
+.menu ul li {
+    margin: 5px; /* Adds vertical spacing between list items */
+}
+
+/* ======================================================================
+   Link Styling:
+   ----------------------------------------------------------------------
+   Styles the individual links within the menu for accessibility and
+   modern visual appeal, including gradient backgrounds and hover effects.
+====================================================================== */
+.menu ul li a {
+    text-decoration: none; /* Removes underline styling */
+    font-size: 18px; /* Sets readable font size for links */
+    color: #FFFFFF; /* Ensures text color is white for contrast */
+    padding: 10px; /* Adds padding for clickable area */
+    display: block; /* Makes the link occupy the full width of its container */
+    background: linear-gradient(45deg, #00008B, #00FFFF ); /* Applies a diagonal gradient from cyan to pink */
+    border-radius: 10px; /* Smoothly rounds the corners */
+    transition: 0.3s; /* Smoothens hover effect transitions */
+}
+
+/* Hover effect for menu links */
+.menu ul li a:hover {
+    background: linear-gradient(45deg, #00FFFF, #00008B); /* Changes to a darker gradient on hover */
+    box-shadow: 0px 0px 20px #00FFFF; /* Adds a glowing effect around the link */
+}
+
+/* ======================================================================
+   "More Games" Specific Link Styling:
+   ----------------------------------------------------------------------
+   Special styles for the "More Games" link, including unique gradient
+   colors and a glowing hover effect.
+====================================================================== */
+.menu-content .more-games {
+    text-decoration: none; /* Removes underline styling */
+    font-size: 18px; /* Sets readable font size for the link */
+    color: #FFFFFF; /* Ensures the text color remains white */
+    padding: 10px; /* Adds padding for clickable area */
+    display: block; /* Makes the link occupy the full width of its container */
+    background: linear-gradient(45deg, #0000FF, #0073CF); /* Adds a gradient from pink to cyan */
+    border-radius: 10px; /* Smoothly rounds the corners */
+    transition: 0.3s; /* Smoothens hover effect transitions */
+}
+
+/* Hover effect for "More Games" link */
+.menu-content .more-games:hover {
+    background: linear-gradient(45deg, #0073CF, #0000FF); /* Changes to a darker gradient on hover */
+    box-shadow: 0px 0px 20px #FFD700; /* Adds a golden glow effect on hover */
+}
+
+/* ======================================================================
+   Popup Image Styling:
+   ----------------------------------------------------------------------
+   Configures the popup images for list items, ensuring they remain hidden
+   by default and appear with fade-in effects on hover.
+====================================================================== */
+.popup-image {
+    display: none; /* Keeps the popup image hidden by default */
+    position: fixed; /* Ensures the image stays relative to the viewport */
+    width: 255px; /* Defines a fixed width for the image */
+    height: 155px; /* Maintains the aspect ratio */
+    border: 2px solid #00FFFF; /* Adds a cyan border for emphasis */
+    border-radius: 10px; /* Smoothly rounds the image edges */
+    box-shadow: 0px 0px 20px #00FFFF; /* Adds a glowing effect around the image */
+    z-index: 1001; /* Ensures the image is layered above other elements */
+    left: calc(100% + var(--popup-offset-x, 10px)); /* Sets horizontal offset */
+    top: var(--popup-offset-y, 0); /* Sets vertical offset */
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in effect for appearance */
+}
+
+/* Hover effect to reveal popup image */
+.menu ul li {
+    position: relative; /* Ensures list items are the reference point for popup images */
+}
+
+/* Displays the popup image on hover */
+.menu ul li:hover .popup-image {
+    display: block; /* Makes the popup image visible */
+}
+
+/* ======================================================================
+   Close Button Styling:
+   ----------------------------------------------------------------------
+   Styles the close button for the menu, ensuring it is both prominent
+   and interactive with hover effects.
+====================================================================== */
+.close-btn {
+    position: center; /* Centers the button within the .menu-content element */
+    top: 0.5rem; /* Aligns the button slightly below the top edge */
+    right: 45rem; /* Adjusts horizontal positioning */
+    font-size: 50px; /* Ensures the button text is large and visible */
+    color: #FF0000; /* Sets the text color to red */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Hover effect for the close button */
+.close-btn:hover {
+    text-shadow: 0px 20px 20px #CC0000; /* Adds a strong shadow on hover */
+    color: #CC0000; /* Darkens the text color */
+    transition: 0.5s; /* Smoothens the hover effect */
+}
+
+/* ======================================================================
+   Keyframes for Fade-In Animation:
+   ----------------------------------------------------------------------
+   Creates a smooth fade-in effect with a slight scaling animation, making
+   elements gracefully appear on the screen.
+====================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starts fully transparent */
+        transform: scale(0.8); /* Starts slightly scaled down */
+    }
+    to {
+        opacity: 1; /* Ends fully opaque */
+        transform: scale(1); /* Returns to normal size */
+    }
+}
+
+/* ======================================================================
+   About Section Overlay Styling:
+   ----------------------------------------------------------------------
+   Configures a hidden overlay for the "About" section, displayed prominently
+   when toggled, with centered content and smooth transitions.
+====================================================================== */
+.about {
+    display: none; /* Hides the section by default */
+    position: fixed; /* Locks the position relative to the viewport */
+    top: 0; /* Aligns the top edge to the viewport */
+    left: 0; /* Aligns the left edge to the viewport */
+    width: 100%; /* Spans the full width of the viewport */
+    height: 100%; /* Spans the full height of the viewport */
+    z-index: 1000; /* Ensures the section appears above all other elements */
+    justify-content: center; /* Horizontally centers content (flexbox property) */
+    align-items: center; /* Vertically centers content (flexbox property) */
+    transition: 0.5s; /* Adds a smooth transition effect */
+    margin-left: 22rem; /* Adjusts horizontal positioning */
+    margin-top: 10rem; /* Adjusts vertical positioning */
+}
+
+/* ======================================================================
+   About Content Styling:
+   ----------------------------------------------------------------------
+   Features a glassmorphic effect with translucent backgrounds, blurred
+   overlays, and glowing shadow for modern aesthetics.
+====================================================================== */
+.about-content {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Adds a glassmorphic blur effect */
+    border: 2px solid #FF69B4; /* Adds a pink border around the content */
+    border-radius: 10px; /* Rounds the corners for smooth edges */
+    padding: 20px; /* Adds consistent inner spacing */
+    text-align: center; /* Centers all text content */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.2), /* Adds subtle floating shadow */
+        0px 20px 20px #000000; /* Stronger shadow at the bottom */
+    width: 50%; /* Restricts content width */
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* ======================================================================
+   Header Styling Inside About Content:
+   ----------------------------------------------------------------------
+   Configures the main header within the "About" section content.
+====================================================================== */
+.about h2 {
+    color: #FFFFFF; /* Sets header text color to white */
+    margin-bottom: 30px; /* Adds spacing below the header */
+}
+
+/* ======================================================================
+   Paragraph Styling Inside About Content:
+   ----------------------------------------------------------------------
+   Styles the text with uppercase transformations, bordered sections,
+   and hover effects for interactivity.
+====================================================================== */
+.about-content p {
+    text-transform: uppercase; /* Makes all text uppercase */
+    display: block; /* Sets paragraphs as block-level elements */
+    padding: 10px; /* Adds inner spacing for readability */
+    margin: 5px 0; /* Adds vertical spacing between paragraphs */
+    color: #000000; /* Sets the paragraph text color to black */
+    text-decoration: none; /* Removes default text decoration */
+    font-size: 16px; /* Ensures readability with a 16px font size */
+    border: 1px solid #00FFFF; /* Highlights text with a cyan border */
+    border-radius: 5px; /* Smoothly rounds the edges */
+    transition: 0.3s; /* Adds smooth hover effect transitions */
+}
+
+/* Hover effects for paragraphs inside the about content */
+.about-content p:hover {
+    color: #FFFFFF; /* Changes text color to white */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+    transform: scale(1.1); /* Slightly enlarges the paragraph */
+    box-shadow: 0 0 10px #00FFFF; /* Adds a glowing cyan shadow */
+    background: rgba(0, 0, 0, 0.8); /* Darkens background with opacity */
+    backdrop-filter: blur(10px); /* Intensifies blur effect */
+    transition: 0.5s; /* Ensures smooth hover transitions */
+}
+
+/* ======================================================================
+   About Team Section Styling:
+   ----------------------------------------------------------------------
+   Highlights the names and roles of team members with different colors
+   for emphasis and adds interactivity on hover.
+====================================================================== */
+.about-team {
+    color: #00FFFF; /* Sets team names text color to cyan */
+}
+
+.about-team:hover {
+    text-shadow: 0px 5px 20px #000000; /* Adds a black shadow effect */
+}
+
+.about-team-role {
+    color: #FFD700; /* Highlights team roles with a gold color */
+}
+
+/* ======================================================================
+   About Section Close Button Styling:
+   ----------------------------------------------------------------------
+   Configures the close button for the "About" section with hover effects
+   for better visibility and interactivity.
+====================================================================== */
+.about-close-btn {
+    cursor: pointer; /* Changes cursor to pointer for interactivity */
+    position: center; /* Aligns the close button within the viewport */
+    top: 0.5rem; /* Sets vertical offset from the top */
+    right: 45rem; /* Sets horizontal offset from the right */
+    font-size: 50px; /* Makes the button prominent with a large font size */
+    color: #FF0000; /* Sets text color to red for visibility */
+}
+
+/* Hover effects for the close button */
+.about-close-btn:hover {
+    text-shadow: 0px 20px 20px #CC0000; /* Adds a strong shadow on hover */
+    color: #CC0000; /* Changes color to a darker red */
+    transition: 1s; /* Adds a smooth hover effect transition */
+}
+
+/* ======================================================================
+   Contact Menu Styling:
+   ----------------------------------------------------------------------
+   This configures the fullscreen overlay for the "Contact Us" section,
+   making it hidden by default and centered when displayed.
+====================================================================== */
+.contact-menu {
+    display: none; /* Keeps the menu hidden initially */
+    position: fixed; /* Fixes position relative to the viewport */
+    top: 0; /* Aligns the top edge to the viewport */
+    left: 0; /* Aligns the left edge to the viewport */
+    width: 100%; /* Spans the full width of the viewport */
+    height: 100%; /* Spans the full height of the viewport */
+    z-index: 1000; /* Positions the menu above other content */
+    justify-content: center; /* Centers content horizontally (flexbox property) */
+    align-items: center; /* Centers content vertically (flexbox property) */
+    transition: 0.5s; /* Adds smooth visibility transitions */
+    margin-left: 22rem; /* Adjusts horizontal positioning */
+    margin-top: 10rem; /* Adjusts vertical positioning */
+}
+
+/* ======================================================================
+   Contact Info Box Styling:
+   ----------------------------------------------------------------------
+   Creates a central box with glassmorphic design and glowing effects
+   for displaying contact details.
+====================================================================== */
+.contact-info {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    backdrop-filter: blur(10px) drop-shadow(0 0 10px #00FFFF); /* Adds blur and cyan glow effects */
+    border: 2px solid #FF69B4; /* Pink border for emphasis */
+    border-radius: 10px; /* Smoothly rounds the corners */
+    padding: 20px; /* Adds internal spacing for better readability */
+    text-align: center; /* Centers text within the box */
+    width: 50%; /* Restricts the width to half the viewport */
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.2), /* Subtle floating effect */
+        0px 20px 20px #000000; /* Stronger black shadow at the bottom */
+}
+
+/* ======================================================================
+   Paragraph Styling Inside Contact Info:
+   ----------------------------------------------------------------------
+   Configures the look and feel for text paragraphs with smooth hover
+   effects for interactivity.
+====================================================================== */
+.contact-info p {
+    display: block; /* Sets paragraphs as block elements */
+    padding: 5px; /* Adds internal padding for spacing */
+    margin: 5px; /* Adds vertical spacing between paragraphs */
+    color: #000000; /* Sets paragraph text color to black */
+    text-decoration: none; /* Removes underlines and decorations */
+    border: 1px solid #00FFFF; /* Highlights text with a cyan border */
+    border-radius: 10px; /* Smoothly rounds corners */
+    transition: 0.5s; /* Adds smooth transitions for hover effects */
+}
+
+/* Hover effects for paragraphs */
+.contact-info p:hover {
+    color: #000000; /* Keeps text color black */
+    background: #00FFFF; /* Adds a cyan background on hover */
+    box-shadow: 0 0 10px #00FFFF; /* Creates a glowing effect on hover */
+    transform: scale(1.1); /* Slightly enlarges the paragraph */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+}
+
+/* ======================================================================
+   Link Styling Inside Contact Info Paragraphs:
+   ----------------------------------------------------------------------
+   Removes decorations for links inside the paragraphs.
+====================================================================== */
+.contact-info p a {
+    text-decoration: none; /* Removes underlines from links */
+}
+
+/* ======================================================================
+   Heading Styling for Contact Menu:
+   ----------------------------------------------------------------------
+   Adjusts the title inside the contact menu for visual impact.
+====================================================================== */
+.contact-menu h2 {
+    color: #FFFFFF; /* Sets header color to white */
+    margin-bottom: 30px; /* Adds spacing below the header */
+}
+
+/* ======================================================================
+   Close Button Styling for Contact Menu:
+   ----------------------------------------------------------------------
+   Styles the close button for user interaction, including hover effects.
+====================================================================== */
+.contact-close-btn {
+    cursor: pointer; /* Indicates interactivity */
+    position: center; /* Aligns button centrally within the menu */
+    top: 0.5rem; /* Adjusts vertical offset from the top */
+    right: 45rem; /* Adjusts horizontal offset from the right */
+    font-size: 50px; /* Increases size for visibility */
+    color: #FF0000; /* Red color for prominence */
+}
+
+/* Hover effects for the close button */
+.contact-close-btn:hover {
+    text-shadow: 0px 20px 20px #CC0000; /* Adds a strong red shadow */
+    color: #CC0000; /* Darkens the red for hover */
+    transition: 0.5s; /* Smoothens hover animations */
+}
+
+/* ======================================================================
+   Marquee Container Styling:
+   ----------------------------------------------------------------------
+   Creates a visually appealing container for scrolling text, with
+   animations and glassmorphic effects.
+====================================================================== */
+.marquee-container {
+    top: 20rem; /* Adjusts vertical positioning */
+    position: center; /* Centers the container */
+    width: 25%; /* Restricts the container width */
+    height: 12.5%; /* Adjusts height for scrolling text */
+    overflow: hidden; /* Hides overflow content */
+    border: 5px solid transparent; /* Adds spacing without visible borders */
+    padding: 10px; /* Internal spacing */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black for a glass effect */
+    backdrop-filter: blur(10px); /* Adds blur for glassmorphic effect */
+    animation: glow 2.5s infinite alternate; /* Glowing animation */
+    border-radius: 30px; /* Smoothly rounds the edges */
+    box-shadow: 0 0 10px #FF69B4; /* Adds pink glow around the container */
+}
+
+/* ======================================================================
+   Marquee Text Styling:
+   ----------------------------------------------------------------------
+   Configures scrolling text to create a dynamic and engaging effect.
+====================================================================== */
+.marquee-text {
+    position: center; /* Aligns text centrally */
+    text-align: center; /* Centers text horizontally */
+    font-size: 2em; /* Increases font size for visibility */
+    font-weight: bold; /* Enhances text weight */
+    color: #FFFFFF; /* White text for high contrast */
+    text-shadow: 0 0 10px #FF69B4; /* Adds a pink glow effect */
+    animation: marquee 5s linear infinite; /* Scrolls text continuously */
+    bottom: 80rem; /* Adjusts vertical positioning */
+}
+
+/* ======================================================================
+   Keyframes for Marquee Animation:
+   ----------------------------------------------------------------------
+   Defines the horizontal scrolling effect for marquee text.
+====================================================================== */
+@keyframes marquee {
+    from { 
+        transform: translateX(100%); /* Starts off-screen from the right */
+    }
+    to { 
+        transform: translateX(-100%); /* Ends off-screen to the left */
+    }
+}
+
+/* ======================================================================
+   Keyframes for Glow Animation:
+   ----------------------------------------------------------------------
+   Adds a glowing effect to marquee containers, alternating brightness.
+====================================================================== */
+@keyframes glow {
+    0%, 100% {
+        border-color: transparent; /* Fully transparent border */
+        box-shadow: none; /* No shadow effect */
+    }
+    10%, 90% {
+        border-color: #FF69B4; /* Pink glowing border */
+        box-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4; /* Bright glow effect */
+    }
+}

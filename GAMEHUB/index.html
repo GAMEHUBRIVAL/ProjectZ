@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    ====================================================================================
+    This document is coded in HTML5. It features a complete page layout for GAME-HUB,
+    including a navigation bar, multiple content sections (Upcoming Releases, Game Library,
+    About Us, Contact Us), and dynamic animation players via Lottie.
+    ====================================================================================
+-->
+
+<head>
+    <!-- ================================ Metadata Section ================================ -->
+    <!--
+      Charset: Specifies the document's character encoding as UTF-8 (Universal),
+      ensuring support for most characters and symbols.
+    -->
+    <meta charset="UTF-8">
+    
+    <!-- 
+      Viewport: Sets the viewport to match the device's width and initial zoom level.
+      This is key for responsive design on mobile devices.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================================ Internal CSS Section ================================ -->
+    <style>
+        /*
+          The body style forces the "Comic Sans" font family for the entire document.
+          The !important flag ensures that this style overrides any competing styles.
+        */
+        body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+        }
+    </style>
+
+    <!-- ================================ External Resource Links ================================ -->
+    <!-- Link to an external CSS file for additional styling rules -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to an external JavaScript file which contains the page's interactive logic -->
+    <script src="script.js"></script>
+    
+    <!-- The Document Title as it appears in the browser's title bar/tab -->
+    <title>GAME-HUB</title>
+
+    <!-- Lottie Script: Enables usage of high-quality, lightweight animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Google Site Verification: Used to verify site ownership in webmaster tools -->
+    <meta name="google-site-verification" content="RLMFlz3pTlNnp0XoDMuz8kKDZ9B-DvKZgatilztILY0" />
+</head>
+
+<body>
+    <!-- ================================ Navigation Bar ================================ -->
+    <nav class="navbar">
+        <ul class="but">
+            <!-- Each button here calls a JavaScript function to open the corresponding section -->
+            <li>
+                <button onclick="openUpcoming()">
+                    Upcoming Releases
+                </button>
+            </li>
+            <li>
+                <button onclick="openMenu()">
+                    Game Library
+                </button>
+            </li>
+            <li>
+                <button onclick="openAbout()">
+                    About Us
+                </button>
+            </li>
+            <li>
+                <button onclick="openContact()">
+                    Contact Us
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ================================ Upcoming Games Section ================================ -->
+    <div id="upcoming-game" class="upcoming-menu">
+        <div class="upcoming-content">
+            <!-- Close Button: Allows the user to exit this section -->
+            <span class="upcoming-close-btn b3" onclick="closeUpcoming()">&times;</span>
+            
+            <!-- Section Title with Decorative Emojis -->
+            <h2>🚀 Get Ready for Upcoming Game Releases 🚀</h2>
+            
+            <!-- List of Upcoming Games -->
+            <div class="upcoming-game-list">
+                <ul>
+                    <li>
+                        <!-- NOTE: Replace the placeholder URL (####...) with the actual game page URL -->
+                        <a href="https://gamehubrival.github.io/ProjectZ/UPCOMING_GAMES">
+                            GAME-RIVAL
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Detailed description for the upcoming games -->
+            <p>
+                Stay ahead of the curve with our upcoming game releases!</br></br>
+                We're working hard to bring you the most fun and engaging gaming experiences.</br></br>
+                Get ready for exciting new titles like "The King's Crowns" and "Castle Escape", launching soon;
+                these games will feature enjoyable gameplay, interesting challenges, and unique mechanics
+                that will keep you entertained.</br>
+                Join our vibrant community of gamers, stay connected for the latest updates and behind-the-scenes
+                content, and keep an eye on this space for more exciting announcements. 🌟🚀
+            </p>
+        </div>
+    </div>
+
+    <!-- ================================ Game Menu Section ================================ -->
+    <div id="game-menu" class="menu">
+        <div class="menu-content">
+            <!-- Close Button: Allows the user to dismiss the game menu -->
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            
+            <!-- Section Title with Bold Styling and Emojis -->
+            <h2><b>🌟 Top Games 🌟</b></h2>
+            
+            <!-- Game List: Each list item represents a game, including an image -->
+            <ul>
+                <li>
+                    <a href="https://gamehubrival.github.io/ProjectZ/dr1v3n-wild">
+                        DR1V3N-WILD
+                    </a>
+                    <img src="dr1v3n-wild.png" class="popup-image" alt="Game Image: DR1V3N-WILD" />
+                </li>
+                <li>
+                    <a href="https://gamehubrival.github.io/ProjectZ/13th-floor">
+                        13th-Floor
+                    </a>
+                    <img src="13th-floor.png" class="popup-image" alt="Game Image: 13th-Floor" />
+                </li>
+                <li>
+                    <a href="https://gamehubrival.github.io/ProjectZ/flappy-bird">
+                        Flappy Bird
+                    </a>
+                    <img src="flappy-bird.png" class="popup-image" alt="Game Image: Flappy Bird" />
+                </li>
+                <li>
+                    <a href="https://gamehubrival.github.io/ProjectZ/doodle-jump">
+                        Doodle Jump
+                    </a>
+                    <img src="doodle-jump.png" class="popup-image" alt="Game Image: Doodle Jump" />
+                </li>
+                <li>
+                    <a href="https://gamehubrival.github.io/ProjectZ/MORE_GAMES" class="more-games">
+                        🕹️ More Games 🕹️
+                    </a>
+                    <img src="More Games.png" class="popup-image" alt="Game Image: More Games" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================================ About Us Section ================================ -->
+    <div id="game-about" class="about">
+        <div class="about-content">
+            <!-- Close Button: Exits the About Us section -->
+            <span class="about-close-btn b3" onclick="closeAbout()">&times;</span>
+            
+            <!-- Section Title with Emojis -->
+            <h2>📚 About Us 📚</h2>
+            <p>
+                Welcome to Game Hub, a project by Group-3, where we bring together exciting web games for everyone to enjoy! 🎮<br><br>
+                We are a team of four passionate students who love both gaming and web development.
+                Our goal is to create a platform where users can play multiple games in one place with a smooth,
+                engaging experience. 🌟<br><br>
+                <b>Meet Our Team:</b><br>
+                <span class="about-team">
+                    Nikhil Ku. Bhoi – <span class="about-team-role">Developer (Handles coding, logic, and functionality) 👨‍💻</span><br>
+                    Vikaram Tripathi – <span class="about-team-role">UI/UX Designer (Designs the website layout and styling) 🎨</span><br>
+                    Chiranjibi Naik – <span class="about-team-role">Content Manager (Writes text, game descriptions, and updates) 📝</span><br>
+                    Priyaranjan Agharia – <span class="about-team-role">Tester & Debugger (Ensures smooth website performance) 🔧</span><br>
+                </span>
+                🌟
+            </p>
+        </div>
+    </div>
+
+    <!-- ================================ Contact Us Section ================================ -->
+    <div id="contact-game" class="contact-menu">
+        <div class="contact-info">
+            <!-- Close Button: Closes the Contact Us popup -->
+            <span class="contact-close-btn b3" onclick="closeContact()">&times;</span>
+            <h2>📞 Contact Us 📞</h2>
+            
+            <!-- Contact Details -->
+            <p>
+                For inquiries, feedback, or support, please reach out to us through the following channels: 📬
+            </p>
+            <p>
+                <strong>Email:</strong><br>
+                General Inquiries/Technical Support: 
+                <a href="mailto:gamehubrival2025@gmail.com">gamehubrival2025@gmail.com</a> 📧
+            </p>
+            <p>
+                <strong>Phone:</strong><br>
+                Customer Service: +91-8917439930 📞<br>
+                Technical Support: +91-6371431551 📱
+            </p>
+            <p>
+                <strong>Social Media:</strong><br>
+                Stay connected and engage with us on social media: 🌐<br>
+                X: <a href="https://x.com/GAME_HUB_RIVAL">@GamingSite</a> 🐦<br>
+                Instagram: <a href="https://www.instagram.com/game_hub25/">@GamingSite_Official</a> 📸
+            </p>
+        </div>
+    </div>
+
+    <!-- ================================ Marquee Title ================================ -->
+    <div class="marquee-container">
+        <h1 class="game-hub border2 marquee-text">🎮GAME-HUB🎮</h1>
+    </div>
+
+    <!-- ================================ Lottie Animation Players ================================ -->
+    <!-- First Animation: A gamepad or controller animation to add dynamic visuals -->
+    <lottie-player class="game-pad"
+                   src="Animation - 1738320022261.json"
+                   background="transparent"
+                   speed="1"
+                   style="width: 300px; height: 300px;"
+                   loop
+                   autoplay>
+    </lottie-player>
+
+    <!-- Second Animation: A whimsical animation of a girl and a dog -->
+    <lottie-player class="game-pad-2"
+                   src="girlanddog.json"
+                   background="transparent"
+                   speed="1"
+                   style="width: 300px; height: 300px;"
+                   loop
+                   autoplay>
+    </lottie-player>
+</body>
+
+</html>

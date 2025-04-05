@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ====================================================================
+     Document Declaration:
+     --------------------------------------------------------------------
+     This document is HTML5 and the primary language is set to English.
+==================================================================== -->
+
+<head>
+    <!-- ====================================================================
+         Metadata Section:
+         --------------------------------------------------------------------
+         • Charset: Specifies that the document is encoded in UTF-8, which
+           supports a broad range of characters and symbols.
+         • Viewport: Ensures proper scaling and rendering on various mobile devices.
+==================================================================== -->
+    <meta charset="UTF-8"> <!-- Encoding: UTF-8 for comprehensive character support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive: Device width and scaling -->
+
+    <!-- ====================================================================
+         Title:
+         --------------------------------------------------------------------
+         The title appears on the browser tab and is important for SEO.
+==================================================================== -->
+    <title>GAME-HUB: Upcoming Releases</title> <!-- Webpage title -->
+
+    <!-- ====================================================================
+         Inline CSS Style:
+         --------------------------------------------------------------------
+         The style below forces the body text to use Comic Sans, giving the page
+         a playful, distinctive look. The "!important" flag ensures this choice
+         remains dominant over other font declarations.
+==================================================================== -->
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive !important; /* Forces Comic Sans font styling */
+        }
+    </style>
+
+    <!-- ====================================================================
+         External Resources:
+         --------------------------------------------------------------------
+         • CSS File: external stylesheet for additional design rules.
+         • JavaScript File: external script for interactive functionality.
+           The "defer" attribute ensures the script loads after the HTML content.
+==================================================================== -->
+    <link rel="stylesheet" href="style.css"> <!-- External CSS link -->
+    <script defer src="script.js"></script> <!-- External JavaScript with defer -->
+</head>
+
+<body>
+    <!-- ====================================================================
+         Navigation Bar:
+         --------------------------------------------------------------------
+         Contains the main heading of the site. This is the primary identifier
+         shown prominently at the top of the page.
+==================================================================== -->
+    <nav class="navbar">
+        <h1 style="font-size: 40px;">🎉 GAME-HUB: Upcoming Releases 🎉</h1> <!-- Main heading with decorative emojis -->
+    </nav>
+
+    <!-- ====================================================================
+         Main Content Section:
+         --------------------------------------------------------------------
+         This section holds the dynamic content of the page.
+         In this case, game items will be dynamically inserted into the grid.
+==================================================================== -->
+    <main>
+        <!-- Section: Games List -->
+        <section id="games-list" class="grid-container">
+            <!-- Placeholder: Game items will be dynamically added here via JavaScript -->
+        </section>
+    </main>
+
+    <!-- ====================================================================
+         Footer:
+         --------------------------------------------------------------------
+         Provides copyright information and basic attribution.
+==================================================================== -->
+    <footer>
+        <p>&copy; 2025 GAME-HUB | Designed for Gamers</p> <!-- Copyright and design credit -->
+    </footer>
+</body>
+</html>

@@ -6,6 +6,7 @@
 ====================================================================== */
 body {
     background-image: url('game hub-1.jpg'); /* Sets the background image */
+   font-family: 'Orbitron', sans-serif; 
     background-size: cover; /* Ensures the background image fills the viewport proportionally */
     background-position: center; /* Centers the image within the viewport */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
